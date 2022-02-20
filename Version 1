@@ -1,0 +1,41 @@
+import random
+
+print("welcome to black jack")
+print("")
+print("The rules of blackjack are simple: Keep getting cards until you hit 21!")
+print("")
+ 
+
+first_card = []
+second_card = []
+third_card = []
+
+cards = random.choice([2,3,4,5,6,7,8,9,10,11,12,13,14])
+ready = input("type an input for your first card: ")
+first_card.append(cards)
+print(first_card)
+
+hit_2 = input("Do you want a second card? Y/N: ")
+cards = random.choice([2,3,4,5,6,7,8,9,10,11,12,13,14])
+if hit_2 == "Y" or "y":
+ second_card.append(cards)
+ print(second_card)
+ total_1 = sum(first_card + second_card)
+ print("your score is currently", total_1)
+ if total_1 == 21:
+     print("you win")
+ elif total_1 > 21:
+     print("you busted!")
+
+
+hit_3 = input("Do you want a third card? Y/N: ")
+cards = random.choice([2,3,4,5,6,7,8,9,10,11,12,13,14])
+if hit_3 == "Y" or "y":
+ third_card.append(cards)
+ print(third_card)
+ total_2 = sum(first_card + second_card + third_card)
+ print("your score is currently", total_2)
+ if total_2 == 21:
+     print("you win")
+ elif total_2 > 21:
+     print("you busted!")
